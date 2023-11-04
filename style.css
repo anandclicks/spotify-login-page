@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://musicformymind.com/wp-content/uploads/2021/02/Search-bar-screenshot-1024x615.jpg');
+    background-size: cover;
+    position: relative;
+    filter: blur(8px);
+}
+.form-box {
+    height: 85%;
+    width: 400px;
+    background-color: black;
+    position: absolute;
+    top: 9%;
+    left: 33%;
+    border-radius: 10px;
+}
+.top {
+    height: 25%;
+    display: grid;
+    place-items: center;
+}
+.top img {
+    height:40px ;
+    margin: 0px auto;
+}
+.middle, ul {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.middle ul li {
+   margin: 0px 20px;
+}
+.middle ul li a {
+    text-decoration: none;
+    font-family: poppins;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+}
+.middle ul li a::after{
+    height: 2px;
+    width: 100%;
+    background-color: #2EBD59;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0%;
+    transition: ease-in-out 0.3s;
+}
+.middle ul .login-after::after{
+    width: 100%;
+}
+.middle ul li a:hover::after {
+    width: 100%;
+}
+.bottom {
+    height: 65%;
+    width: 100%;
+    padding: 5% 15%;
+    display:flex;
+    flex-direction: column;
+}
+p{
+    color: white;
+    font-family: poppins;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.box {
+    display: flex;
+    margin-bottom: 20px;
+}
+.same:nth-child(1) {
+    margin-top: 0px;
+}
+.same{
+   background-color: transparent;
+   margin: 10px 0px;
+   height: 15%;
+   border: none;
+   border-bottom: 1px solid #fff;
+   color: wheat;
+}
+.same:focus {
+    
+    border-bottom: 1px solid #2EBD59;
+    outline: none !important;
+}
+.bottom button {
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+    font-size: 15px;
+   font-weight: 600;
+   background-color: #2EBD59;
+   color: #fff;
+   text-transform: uppercase;
+}
+.bottom  a {
+    color: #b1b1b1;
+    text-decoration: none;
+    text-align: center;
+}
+.pass-forgot {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .form-box {
+        height: 100vh;
+        width: 100%;
+        margin: 0%;
+        top :0;
+        left: 0;
+        border-radius: 0px;
+    }
+}
+@media screen and (min-width:769px) and (max-width:900px){
+    .form-box {
+        top: 9%;
+        left: 27%;
+        border-radius: 10px;
+    }
+}
